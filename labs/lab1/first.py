@@ -1,8 +1,9 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: <Sydney Wertz>
+<SydneyWertz>.py
 """
 
 
 def main():
-    print("The time has come, the Walrus said, To talk of many thing")
+    print("I look forward to learning to control this computer through programming!")
+main()

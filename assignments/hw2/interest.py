@@ -32,11 +32,5 @@ def main():
 
     print(step_6)
 
-# print(prev_net_bal, "*", days_bill_cycle, "is $", step_1)
-# print(pay_amt, "*", days_bill_cycle, "-", day_pay_made, "is $", step_2)
-# print(step_1, "-", step_2, "is $", step_3)
-# print(step_3, "/", days_bill_cycle, "is $", step_4)
-# print(step_4, "*", ins_year_rate, "is $", step_5)
-
 if __name__ == '__main__': #should be how to run programs from now on
     main()

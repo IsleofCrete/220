@@ -7,7 +7,7 @@ Problem: Homework 9/13/2021 interest
 Certificate of Authenticity
 This assignment is entirely my own work
 
-The round function in line 29 rounds the answer to two decimal places
+The round function in line 31 rounds the answer to two decimal places
 Found here:
 https://kodify.net/python/math/round-decimals/#round-python-values-to-two-decimals-places-and-more
 """

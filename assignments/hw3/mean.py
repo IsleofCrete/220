@@ -14,7 +14,7 @@ def main():
     tot_rms = 0
     tot_harm = 0
     tot_geo = 1
-    for i in range(1, x_n+1):
+    for i in range(1, x_n+1): #if not using i in the code, can replace i with _ in for loop so linting doesn't get mad
         usr_val = eval(input("Enter value " + str(i) + ":"))
         tot_rms = tot_rms + usr_val**2
         tot_harm = tot_harm + (1/usr_val)

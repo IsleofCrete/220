@@ -22,19 +22,24 @@ def main():
     door1_pt = Rectangle(Point(75, 175), Point(175, 130))
     text1 = Text(Point(127, 152), "Door 1")
     door1 = Button(door1_pt, text1)
+    door1.draw(win)
 
     door2_pt = Rectangle(Point(250, 175), Point(350, 130))
     text2 = Text(Point(302, 152), "Door 2")
     door2 = Button(door2_pt, text2)
+    door2.draw(win)
 
     door3_pt = Rectangle(Point(425, 175), Point(525, 130))
     text3 = Text(Point(477, 152), "Door 3")
     door3 = Button(door3_pt, text3)
+    door3.draw(win)
 
     secret_door = choice([1, 2, 3])
     print(secret_door) #take this out before turning in
 
-    lower_lose_text = "Door", secret_door, "is the secret door" # how do I fix it appearing like this in the window: Door 2 {is the secret door}
+    #probably an unecessary variable, but I'm keeping it for the time being just for clarity
+    lower_lose_text = "Door", secret_door, "is the secret door"
+        # how do I fix it appearing like this in the window: Door 2 {is the secret door}
 
     user_click = win.getMouse()
 
@@ -43,29 +48,29 @@ def main():
     door3_check = is_clicked(user_click, door3)
 
     if door1_check is True and secret_door == 1:
-        door1.setFill("green")
+        door1.color_button("green")
         upper_text.setText("You win!")
         lower_text.setText("Click anywhere to close")
     elif door1_check is True and secret_door != 1:
-        door1.setFill("red")
+        door1.color_button("red")
         upper_text.setText("You lose!")
         lower_text.setText(lower_lose_text)
 
     elif door2_check is True and secret_door == 2:
-        door2.setFill("green")
+        door2.color_button("green")
         upper_text.setText("You win!")
         lower_text.setText("Click anywhere to close")
     elif door2_check is True and secret_door != 2:
-        door2.setFill("red")
+        door2.color_button("red")
         upper_text.setText("You lose!")
         lower_text.setText(lower_lose_text)
 
     elif door3_check is True and secret_door == 3:
-        door3.setFill("green")
+        door3.color_button("green")
         upper_text.setText("You win!")
         lower_text.setText("Click anywhere to close")
     elif door3_check is True and secret_door != 3:
-        door3.setFill("red")
+        door3.color_button("red")
         upper_text.setText("You lose!")
         lower_text.setText(lower_lose_text)
 

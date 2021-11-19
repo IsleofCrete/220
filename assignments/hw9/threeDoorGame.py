@@ -1,11 +1,14 @@
 """
 Name: <Sydney Wertz>
-11.8 Week Classwork.py
+threeDoorGame.py
 
 Problem: Homework 11/18/2021
 
 Certificate of Authenticity
 I certify that his assignment is entirely my own work
+For Test:
+Button is (1, 2) (3, 4)
+X range = (1-3) Y range = (2-4)
 """
 from button import Button
 from random import choice
@@ -20,32 +23,29 @@ def main():
     lower_text.draw(win)
 
     door1_pt = Rectangle(Point(75, 175), Point(175, 130))
-    text1 = Text(Point(127, 152), "Door 1")
+    text1 = "Door 1"
     door1 = Button(door1_pt, text1)
     door1.draw(win)
 
     door2_pt = Rectangle(Point(250, 175), Point(350, 130))
-    text2 = Text(Point(302, 152), "Door 2")
+    text2 = "Door 2"
     door2 = Button(door2_pt, text2)
     door2.draw(win)
 
     door3_pt = Rectangle(Point(425, 175), Point(525, 130))
-    text3 = Text(Point(477, 152), "Door 3")
+    text3 = "Door 3"
     door3 = Button(door3_pt, text3)
     door3.draw(win)
 
     secret_door = choice([1, 2, 3])
-    print(secret_door) #take this out before turning in
 
-    #probably an unecessary variable, but I'm keeping it for the time being just for clarity
-    lower_lose_text = "Door", secret_door, "is the secret door"
-        # how do I fix it appearing like this in the window: Door 2 {is the secret door}
+    lower_lose_text = "The secret door is Door {0}".format(secret_door)
 
     user_click = win.getMouse()
 
-    door1_check = is_clicked(user_click, door1)
-    door2_check = is_clicked(user_click, door2)
-    door3_check = is_clicked(user_click, door3)
+    door1_check = door1.is_clicked(user_click)
+    door2_check = door2.is_clicked(user_click)
+    door3_check = door3.is_clicked(user_click)
 
     if door1_check is True and secret_door == 1:
         door1.color_button("green")

@@ -6,9 +6,6 @@ Problem: Homework 11/18/2021
 
 Certificate of Authenticity
 I certify that his assignment is entirely my own work
-For Test:
-Button is (1, 2) (3, 4)
-X range = (1-3) Y range = (2-4)
 """
 from button import Button
 from random import choice

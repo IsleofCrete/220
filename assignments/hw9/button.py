@@ -42,7 +42,27 @@ class Button:
         door_urx = door_upper_right.getX()
         door_ury = door_upper_right.getY()
 
-        return (door_llx <= user_x <= door_urx) and (door_ury <= user_y <= door_lly)
+        x_max = 0
+        x_min = 0
+
+        y_max = 0
+        y_min = 0
+
+        if door_urx > door_llx:
+            x_max = door_urx
+            x_min = door_llx
+        else:
+            x_max = door_llx
+            x_min = door_urx
+
+        if door_ury > door_lly:
+            y_max = door_ury
+            y_min = door_lly
+        else:
+            y_max = door_lly
+            y_min = door_ury
+
+        return (x_min <= user_x <= x_max) and (y_min <= user_y <= y_max)
 
     def color_button(self, color):
         self.shape.setFill(color)

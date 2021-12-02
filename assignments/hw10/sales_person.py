@@ -1,4 +1,19 @@
+"""
+Name: <Sydney Wertz>
+sales_person.py
+
+Problem: Homework 10
+
+Certificate of Authenticity
+I certify that his assignment is entirely my own work
+"""
+
 class SalesPerson:
+    """
+    SalesPerson creates an employee with their id, name, and all of their sales.
+    Functions include get functions,add sale to employee, calculate total sales,
+    check if employee meets quota, and employee comparison
+    """
 
     def __init__ (self, employee_id, name):
         self.employee_id = int(employee_id)
@@ -18,7 +33,7 @@ class SalesPerson:
         self.name = name
 
     def enter_sale(self, sale):
-        sale_list = self.sales.append(sale)
+        self.sales.append(sale)
 
     def total_sales(self):
         total = 0
@@ -27,10 +42,7 @@ class SalesPerson:
         return float(total)
 
     def met_quota(self, quota):
-        if self.total_sales() >= quota:
-            return True
-        else:
-            return False
+        return bool(self.total_sales() >= quota)
 
     def compare_to(self, other):
         if other.total_sales() > self.total_sales():
